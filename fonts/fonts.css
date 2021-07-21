@@ -1,138 +1,39 @@
-
 @font-face {
-  font-family: 'KoPubWorldDotum';
-  src: url(../fonts/KoPubWorldDotumBold.woff) format('woff');
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Medium.woff) format('woff');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'KoPubWorldDotum';
-  src: url(../fonts/KoPubWorldDotumLight.woff) format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'KoPubWorldDotum';
-  src: url(../fonts/KoPubWorldDotumMedium.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url(../fonts/NotoSansKR-Bold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url(../fonts/NotoSansKR-Light.woff) format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url(../fonts/NotoSansKR-Regular.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url(../fonts/PlayfairDisplay-Regular.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MAK';
-  src: url(../fonts/MAK.woff) format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url(../fonts/Lato-Regular.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url(../fonts/Lato-Light.woff) format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url(../fonts/Lato-Bold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url(../fonts/Lato-Italic.woff) format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'NEXONLv1Gothic';
-  src: url(../fonts/NEXONLv1GothicBold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NEXONLv1Gothic';
-  src: url(../fonts/NEXONLv1GothicRegular.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NEXONLv1Gothic';
-  src: url(../fonts/NEXONLv1GothicLight.woff) format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url(../fonts/PlayfairDisplay-Regular.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url(../fonts/PlayfairDisplay-Italic.woff) format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url(../fonts/PlayfairDisplay-Bold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Chosunilbo_myungjo';
-  src: url(../fonts/Chosunilbo_myungjo.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NanumMyeongjo';
-  src: url(../fonts/NanumMyeongjo.woff) format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NanumMyeongjo';
-  src: url(../fonts/NanumMyeongjoBold.woff) format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'NanumMyeongjo';
-  src: url(../fonts/NanumMyeongjoExtraBold.woff) format('woff');
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Bold.woff) format('woff');
   font-weight: 900;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url(../fonts/SpoqaHanSansNeo-Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url(../fonts/SpoqaHanSansNeo-Medium.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url(../fonts/SpoqaHanSansNeo-Bold.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
 
 
 
