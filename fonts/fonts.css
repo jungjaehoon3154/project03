@@ -34,6 +34,54 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url(../fonts/Chosunilbo_myungjo.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumMyeongjo';
+  src: url(../fonts/NanumMyeongjo.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MAK';
+  src: url(../fonts/MAK.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url(../fonts/PlayfairDisplay-Bold.woff) format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url(../fonts/PlayfairDisplay-BoldItalic.woff) format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SCDream';
+  src: url(../fonts/SCDream1.woff) format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SCDream';
+  src: url(../fonts/SCDream4.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SCDream';
+  src: url(../fonts/SCDream7.woff) format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
 
 
 

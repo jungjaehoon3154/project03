@@ -9,7 +9,7 @@
     <meta name="keywords" content="정재훈, web publisher, 웹퍼블리셔, web publisher portfolio, 웹퍼블리셔 포트폴리오"> 
     <title>정재훈 포트폴리오</title>
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="apple-touch-icon" href="img/favicon_icon.ico">
     <link rel="shortcut icon" href="img/favicon_icon.ico">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- script -->
     <script src="js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -33,15 +33,17 @@
                     <span></span>
                     <span></span>
                 </button>
-                <!--
-                <nav id="gnb">
-                    <span class="blind">주 메뉴</span>
-                    <ul>
-                        <li><a href="#">#ABOUT</a></li>
-                        <li><a href="#">#PROJECT</a></li>
-                        <li><a href="#">#CONTACT</a></li>
-                    </ul>
-                </nav>-->
+                <div class="gnb_bg">
+                    <nav id="gnb">
+                        <span class="blind">주 메뉴</span>
+                        <ul>
+                            <li class="menu1"><a href="#">HOME</a></li>
+                            <li class="menu2"><a href="#">PROJECT</a></li>
+                            <li class="menu3"><a href="#">ABOUT</a></li>
+                            <li class="menu4"><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
         <!-- //header -->
@@ -50,7 +52,14 @@
             <section id="home">
                 <h2 class="blind">홈</h2>
                     <div class="home_wrap">
-                        <div class="left">
+                        <h1>
+                            <span>Jaehoon's</span>  
+                            <span>Portfolio</span>  
+                        </h1>
+                        <div class="scroll">
+                            <a href=""><span></span></a>     
+                        </div>
+                       <!--<div class="left">
                             <h1>
                                 <p>Who says</p>
                                 <p>PortFolio</p>
@@ -66,7 +75,7 @@
                                     <div class="slide"><img src="img/siteTitle01.png" alt=""></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->  
                     </div>
             </section>
             <!-- //home -->
@@ -118,7 +127,7 @@
                                 <img src="img/siteTitle01.png" alt="">
                             </div>
                             <div class="right fade_up">
-                                <h3>Portfolio</h3>
+                                <h3>PORTFOLIO</h3>
                                 <p>미디어 쿼리를 이용하여 디바이스 종류에 따라 유연하게 보여지는 반응형 작업을 진행한 사이트입니다. 또한 웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입니다. 모든 사용자가 이용에 불편이 없도록 웹 접근성 또한 고려하였습니다.</p>
                                 <a href="">VIEW SITE</a>
                                 <a href="">웹접근성 보고서</a>
@@ -129,7 +138,7 @@
                                 <img src="img/siteTitle01.png" alt="">
                             </div>
                             <div class="right fade_up">
-                                <h3>Hanwha E&C</h3>
+                                <h3>HANWHA E&C</h3>
                                 <p>미디어 쿼리를 이용하여 디바이스 종류에 따라 유연하게 보여지는 반응형 작업을 진행한 사이트입니다. SWIPER 이미지 슬라이드, 탭 메뉴 등 제이쿼리와 스크립트를 이용하여 구현하였습니다.</p>
                                 <a href="">VIEW SITE</a>
                                 <a href="">웹접근성 보고서</a>
@@ -140,7 +149,7 @@
                                 <img src="img/siteTitle01.png" alt="">
                             </div>
                             <div class="right fade_up">
-                                <h3>Site</h3>
+                                <h3>HMG</h3>
                                 <p>웹 표준을 준수한 사이트 입니다. 웹 접근성을 높여 사용자가 이용하기 불편함이 없게 제작하였습니다.</p>
                                 <a href="">VIEW SITE</a>
                                 <a href="">웹접근성 보고서</a>
@@ -195,40 +204,24 @@
                 </div>
             </section>
             <!-- //introduce -->
-
-            <section id="contact">
-                <div class="container">
-                    <div class="contact_wrap">
-                        <div class="left">
-                            <h2>Contact</h2>
-                            <ul>
-                                <li><i class="xi-mail-o"></i>jugnjaehoon3154@naver.com</li>
-                                <li><i class="xi-maker"></i>청량리역 근처 거주</li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <div class="contact_box">
-                                <p>SEND A MESSAGE</p>
-                                <form action="">
-                                    <fieldset>
-                                        <label for="">Name</label>
-                                        <input type="text">
-                                        <label for="">Email</label>
-                                        <input type="text">
-                                        <label for=""></label>
-                                        <textarea ></textarea>
-                                        <label for="">Send</label>
-                                        <input type="submit" class="submit">
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </section>
-            <!-- //contact -->
         </main>
         <!-- //main  -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer_wrap">
+                    <div class="contact_box">
+                        <p>SEND A MESSAGE</p>
+                        <form action="" method="POST">
+                            <input type="text" name="name" class="name" placeholder="name">
+                            <input type="email" name="email" class="email" placeholder="email">
+                            <textarea name="message" placeholder="message"></textarea>
+                            <button type="submit" class="submit">SEND</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </footer>
+        <!-- //footer  -->
     </div>
 </body>
 </html>
