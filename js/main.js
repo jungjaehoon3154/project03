@@ -1,13 +1,5 @@
 $(document).ready(function(){
 
-    /* slick
-    $('.img_slide').slick({
-        dots: true,
-        infinite: true,
-        arrows: false,
-    });
-     */
-
     /* fade */
     $(window).on('scroll', function () {
         const scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
@@ -43,7 +35,7 @@ $(document).ready(function(){
                 $('#header .toggle').focus();
             }
         });
-   });
+    });
 
     $("#gnb ul li a").on({
         'mouseenter focus': function () {
@@ -68,19 +60,19 @@ $(document).ready(function(){
     let tagWrite = '';
     for (let i = 0; i < wordArray.length; i++) {
       $logo.html(''); //기존 태그 우선 지우기
-      if (wordArray[i] === '<br>') {
+        if (wordArray[i] === '<br>') {
         tagWrite += '<br>';
-       } else {
+        } else {
         let spanArray = wordArray[i].split(''); //한글자씩 잘라서 배열에 저장
         // console.log(spanArray);
         // 반복문을 통해 각 div 부모 안에 막내 자식으로 span 동적생성
         tagWrite += '<div class="word">';
         for (let j = 0; j < spanArray.length; j++) {
-          tagWrite += `<span class="up">${spanArray[j]}</span>`;
+            tagWrite += `<span class="up">${spanArray[j]}</span>`;
         }
         tagWrite += '</div>';
-      }
-      $logo.append(tagWrite);
+        }
+        $logo.append(tagWrite);
     }
 
     // delay 시간 지정
@@ -89,7 +81,6 @@ $(document).ready(function(){
     });
 
     //마우스오버 효과
-   
     $(".list1").mouseenter(function(){
         $(".show1").addClass("show");
     });
@@ -134,11 +125,14 @@ $(document).ready(function(){
     $(".mov2").css({"transform":"translateX(" + offset2 +"px)"});
     $(".mov3").css({"transform":"translateX(" + offset3 +"px)"});
     $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
-
     }); 
 
-
+    $(".top_btn").click(function() {
+		$('html, body').animate({
+			scrollTop : 0
+		}, 400);
+		return false;
+	});
 
 
 });  
- 
