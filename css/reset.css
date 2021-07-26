@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @font-face {
   font-family: 'Chosunilbo_myungjo';
   src: url(../fonts/Chosunilbo_myungjo.woff) format('woff');
@@ -21,7 +23,8 @@
 body, h1, h2, h3, h4, h5, h6, p, ul, li, button, dl, dd, dt{margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 address, em, i{font-style: normal;}
-h1, h2, h3, h4, h5, h6, strong{font-weight: normal;}
+h1, h2, h3, h4, h5, h6, strong{font-weight: n
+  ormal;}
 ul{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 button{border: none; background: none; cursor: pointer; font-family: inherit; font-size: inherit; color: inherit;}
