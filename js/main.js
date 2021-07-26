@@ -127,13 +127,6 @@ $(document).ready(function(){
     $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
     }); 
 
-    $(".top_btn").click(function() {
-		$('html, body').animate({
-			scrollTop : 0
-		}, 400);
-		return false;
-	});
-
     $(window).scroll(function(){
         var wScroll = $(this).scrollTop();
         
@@ -144,8 +137,6 @@ $(document).ready(function(){
         if (wScroll > $("#ability").offset().top - $(window).height()/1.5) {
             $(".ability_wrap").addClass("show");
         }
-
-        
     
     });
 
@@ -155,7 +146,24 @@ $(document).ready(function(){
         $(this).parent('li').siblings('li').removeClass('active');
     });
     
+    $(".top_btn").click(function() {
+		$('html, body').animate({
+			scrollTop : 0
+		}, 400);
+		return false;
+	});
 
+    //about animation
+    const aboutSpan = $('.introduce_wrap .desc');
+
+    $(window).scroll(function(){
+        var wScroll = $(this).scrollTop();
+        
+        if(wScroll >= $('.introduce_wrap .txt_box').offset().top - $(window).height() * 1/3){
+            aboutSpan.addClass('on');
+  
+        };
+    });    
 
 
 });  
