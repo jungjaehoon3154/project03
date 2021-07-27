@@ -8,7 +8,6 @@
   width: 100%; }
 
 .header_wrap .toggle {
-  /* visibility: hidden; max-height: 0; overflow: hidden; */
   display: block;
   position: absolute;
   top: 3vh;
@@ -16,10 +15,10 @@
   z-index: 999; }
   .header_wrap .toggle span {
     display: block;
-    background: #121212;
+    background: #1e1e1e;
     width: 40px;
     height: 3px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     transition: 0.25s margin 0.25s, 0.25s transform; }
     .header_wrap .toggle span:nth-child(1) {
       margin-bottom: 7px; }
@@ -40,7 +39,7 @@
 .header_wrap .gnb_bg {
   position: fixed;
   width: 100%;
-  background: #000;
+  background: #1e1e1e;
   color: #fff;
   font-weight: 700;
   z-index: 99;
@@ -66,7 +65,7 @@
     opacity: 1;
     left: 0;
     transition: all .5s;
-    font-family: "NanumMyeongjo"; }
+    font-family: NanumMyeongjo; }
   .header_wrap .gnb_bg.active .menu1 {
     transition-delay: .35s; }
   .header_wrap .gnb_bg.active .menu2 {
@@ -101,7 +100,7 @@
         width: 0%;
         height: 2vw;
         z-index: -1;
-        background: linear-gradient(to right, #F7971E 0%, #FFD200 100%);
+        background: linear-gradient(to right, #f7971e 0%, #ffd200 100%);
         transition: all 0.2s ease; }
       #gnb ul li a:hover::after {
         width: 100%; }
@@ -114,16 +113,21 @@
   left: 0;
   z-index: -1;
   width: 100%;
-  background: #FFF;
-  color: #222;
-  border-bottom: 1px solid #222; }
+  background: #fff;
+  border-bottom: 1px solid #1e1e1e; }
 
 .home_wrap {
   position: relative;
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center; }
   .home_wrap h1 {
     font-size: 5vw;
@@ -139,31 +143,6 @@
       display: inline-block; }
   .home_wrap .logo.on .word .up {
     animation: fadeUp 1s forwards; }
-  .home_wrap .scroll {
-    position: absolute;
-    bottom: 15%;
-    right: 8%; }
-  .home_wrap a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 36px;
-    height: 36px;
-    margin-left: -12px;
-    border-left: 1px solid #222;
-    border-bottom: 1px solid #222;
-    transform: rotate(-45deg);
-    animation: sc 2s infinite;
-    opacity: 0;
-    box-sizing: border-box; }
-    .home_wrap a span:nth-of-type(1) {
-      animation-delay: 0s; }
-    .home_wrap a span:nth-of-type(2) {
-      top: 16px;
-      animation-delay: 0.15s; }
-    .home_wrap a span:nth-of-type(3) {
-      top: 32px;
-      animation-delay: 0.3s; }
 
 @keyframes fadeUp {
   0% {
@@ -172,25 +151,18 @@
   100% {
     opacity: 1;
     transform: translateY(0px); } }
-@keyframes sc {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 /* index */
 #index {
   padding-top: 100vh; }
 
 .index_wrap .band {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #1e1e1e;
   overflow: hidden;
   background: #fff; }
   .index_wrap .band:nth-of-type(1) {
-    border-top: 1px solid #000; }
+    border-top: 1px solid #1e1e1e; }
   .index_wrap .band p {
-    font-family: 'NanumMyeongjo';
+    font-family: NanumMyeongjo;
     font-weight: 300;
     font-size: 8vw;
     white-space: nowrap;
@@ -199,7 +171,7 @@
     display: inline-block;
     width: 9vw;
     height: 0.5vw;
-    background: #222;
+    background: #1e1e1e;
     vertical-align: middle; }
 
 /* introduce */
@@ -207,7 +179,7 @@
   overflow: hidden; }
 
 .introduce_wrap .img_box {
-  background: url(../img/city-336708_1920.jpg) no-repeat center center/cover;
+  background: url(../img/city.jpg) no-repeat center center/cover;
   height: 100vh;
   position: relative; }
   .introduce_wrap .img_box div {
@@ -225,7 +197,7 @@
       background: #fff;
       width: 250px;
       padding: 20px;
-      border: 1px solid #000; }
+      border: 1px solid #1e1e1e; }
     .introduce_wrap .img_box div:nth-child(1) {
       top: 40%;
       left: 20%; }
@@ -236,13 +208,18 @@
       top: 20%;
       right: 50%; }
 .introduce_wrap .txt_box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh; }
   .introduce_wrap .txt_box p {
     word-break: keep-all;
-    font-family: 'NanumMyeongjo';
+    font-family: NanumMyeongjo;
     font-size: 3vw;
     line-height: 1.5; }
 .introduce_wrap .desc {
@@ -309,6 +286,7 @@
     margin: 0;
     margin-bottom: 15px;
     padding: 0 10px;
+    font-family: NanumMyeongjo;
     font-size: 3vw;
     background: #fff;
     line-height: 30px; }
@@ -318,6 +296,10 @@
   right: 25px;
   left: 25px;
   bottom: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   width: calc(100% - 90px);
@@ -344,9 +326,10 @@
   .ability_wrap .graph li {
     margin-bottom: 10px;
     padding: 20px 0;
-    background: #000;
+    background: #1e1e1e;
     color: #fff;
     text-align: left;
+    font-family: NanumMyeongjo;
     font-size: 1vw;
     width: 0;
     transition: width 1s; }
@@ -390,7 +373,7 @@
   padding: 5vw 0;
   line-height: 2; }
   .ability_wrap .left strong {
-    font-family: 'NanumMyeongjo';
+    font-family: NanumMyeongjo;
     display: block;
     font-size: 6vw;
     opacity: 0; }
@@ -407,7 +390,7 @@
 .ability_wrap .right {
   position: relative;
   flex-basis: 50%;
-  border-left: 1px solid #222;
+  border-left: 1px solid #1e1e1e;
   line-height: 1.5;
   box-sizing: border-box; }
   .ability_wrap .right p {
@@ -427,10 +410,14 @@
   100% {
     opacity: 1;
     transform: translateY(0); } }
-.poroject_wrap {
+.project_wrap {
   padding: 0 10vw; }
 
 .project_box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   padding: 10vw 0; }
@@ -438,14 +425,19 @@
     flex-flow: row-reverse; }
   .project_box .left {
     flex-basis: 40%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    -webkit-justify-content: center;
     justify-content: center;
     cursor: pointer; }
     .project_box .left strong {
       position: relative;
       display: block;
-      font-family: "NanumMyeongjo";
+      font-family: NanumMyeongjo;
       font-size: 2vw;
       font-weight: 700;
       padding: 2vw 0;
@@ -500,78 +492,6 @@
   opacity: 1;
   transform: translate(0, 0); }
 
-/* script */
-#script {
-  background: #121212;
-  color: #fff; }
-
-.script_wrap {
-  height: 100vh;
-  max-width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .script_wrap .script_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 26vw;
-    background: #fff; }
-  .script_wrap .txt_box {
-    width: 20vw;
-    padding: 2.6vw;
-    text-align: center;
-    line-height: 2.6vw;
-    font-size: 2vw;
-    font-weight: 900;
-    color: #555; }
-    .script_wrap .txt_box ul {
-      height: 2.6vw;
-      color: #fff;
-      overflow: hidden; }
-      .script_wrap .txt_box ul li {
-        margin-bottom: 2.6vw; }
-        .script_wrap .txt_box ul li:nth-child(1) {
-          animation: txtUp 5s cubic-bezier(0.04, 0.57, 0.89, 0.39) infinite; }
-        .script_wrap .txt_box ul li span {
-          display: inline-block;
-          padding: 0 0.7vw; }
-        .script_wrap .txt_box ul li:nth-child(1) span {
-          background: #ff0000; }
-        .script_wrap .txt_box ul li:nth-child(2) span {
-          background: #008000; }
-        .script_wrap .txt_box ul li:nth-child(3) span {
-          background: #0000ff; }
-  .script_wrap .script_txt {
-    width: 100%;
-    text-align: center; }
-    .script_wrap .script_txt h3 {
-      font-size: 1.5vw;
-      margin: 3vh 0; }
-    .script_wrap .script_txt p {
-      font-size: 3vw;
-      line-height: 1.5; }
-
-/* 5%만큼 상단이동후 28%는 정지상태유지 */
-@keyframes txtUp {
-  0% {
-    margin-top: 5.2vw; }
-  5% {
-    margin-top: 0px; }
-  33% {
-    margin-top: 0px; }
-  38% {
-    margin-top: -5.2vw; }
-  66% {
-    margin-top: -5.2vw; }
-  71% {
-    margin-top: -10.4vw; }
-  99% {
-    margin-top: -10.4vw; }
-  100% {
-    margin-top: -13vw; } }
 /* footer */
 #footer {
   position: relative;
@@ -581,21 +501,30 @@
 .footer_wrap {
   max-width: 80%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
   height: 100vh; }
   .footer_wrap .contact_box {
     text-align: center; }
     .footer_wrap .contact_box p {
+      font-family: NanumMyeongjo;
       font-size: 3vw;
       padding-bottom: 10vh; }
     .footer_wrap .contact_box input {
+      font-family: NanumMyeongjo;
       width: 100%;
       border: 1px solid #1e1e1e;
       padding: 1vw;
       margin-bottom: 2vh; }
     .footer_wrap .contact_box textarea {
+      font-family: NanumMyeongjo;
       width: 100%;
       border: 1px solid #1e1e1e;
       padding: 1vw;
@@ -607,6 +536,7 @@
       background: #1e1e1e;
       color: #fff;
       border-radius: 1.5vw;
+      font-family: NanumMyeongjo;
       font-size: 1vw;
       padding: 1vw;
       cursor: pointer; }
@@ -656,21 +586,21 @@
       .ability_wrap ul li span {
         font-size: 30px; }
 
-  .poroject_wrap .works {
+  .project_wrap .works {
     flex-direction: column; }
-  .poroject_wrap .right {
+  .project_wrap .right {
     width: 65%; }
-    .poroject_wrap .right h3 {
+    .project_wrap .right h3 {
       font-size: 30px;
       margin: 2vw 0; }
-    .poroject_wrap .right p {
+    .project_wrap .right p {
       font-size: 12px; }
-    .poroject_wrap .right a {
+    .project_wrap .right a {
       font-size: 12px;
       padding: 1.5vw 0.5vw;
       margin-right: 1vw;
       width: 30%; }
-  .poroject_wrap .works:nth-child(even) {
+  .project_wrap .works:nth-child(even) {
     flex-direction: column; }
 
   #contact {

@@ -1,7 +1,7 @@
 @charset "utf-8";
+@import  "_var", "_mixin";
 
 /* header */
-
 #header {
   position: fixed;
   top: 0;
@@ -12,7 +12,6 @@
 
 .header_wrap {
   .toggle {
-    /* visibility: hidden; max-height: 0; overflow: hidden; */
     display: block;
     position: absolute;
     top: 3vh;
@@ -21,10 +20,10 @@
 
     span {
       display: block;
-      background: #121212;
+      background: $black;
       width: 40px;
       height: 3px;
-      border: 1px solid #FFF;
+      border: 1px solid #fff;
       transition: 0.25s margin 0.25s, 0.25s transform;
 
       &:nth-child(1) {
@@ -60,7 +59,7 @@
   .gnb_bg {
     position: fixed;
     width: 100%;
-    background: #000;
+    background: $black;
     color: #fff;
     font-weight: 700;
     z-index: 99;
@@ -97,10 +96,10 @@
 
     &.active {
       li {
-        opacity: 1;
+        opacity: 1; 
         left: 0;
         transition: all .5s;
-        font-family: "NanumMyeongjo";
+        font-family: $engFont;
       }
 
       .menu1 {
@@ -154,7 +153,7 @@
         width: 0%;
         height: 2vw;
         z-index: -1;
-        background: linear-gradient(to right, #F7971E 0%, #FFD200 100%);
+        background: linear-gradient(to right, #f7971e  0%, #ffd200  100%);
         transition: all 0.2s ease;
       }
 
@@ -175,18 +174,17 @@
   left: 0;
   z-index: -1;
   width: 100%;
-  background: #FFF;
-  color: #222;
-  border-bottom: 1px solid #222;
+  background: #fff;
+  border-bottom: 1px solid $black;
 }
 
 .home_wrap {
   position: relative;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
+  @include justify-content;
+  @include align-items;
 
   h1 {
     font-size: 5vw;
@@ -211,41 +209,6 @@
       animation: fadeUp 1s forwards;
     }
   }
-
-  .scroll {
-    position: absolute;
-    bottom: 15%;
-    right: 8%;
-  }
-
-  a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 36px;
-    height: 36px;
-    margin-left: -12px;
-    border-left: 1px solid #222;
-    border-bottom: 1px solid #222;
-    transform: rotate(-45deg);
-    animation: sc 2s infinite;
-    opacity: 0;
-    box-sizing: border-box;
-
-    &:nth-of-type(1) {
-      animation-delay: 0s;
-    }
-
-    &:nth-of-type(2) {
-      top: 16px;
-      animation-delay: 0.15s;
-    }
-
-    &:nth-of-type(3) {
-      top: 32px;
-      animation-delay: 0.3s;
-    }
-  }
 }
 
 @keyframes fadeUp {
@@ -260,35 +223,20 @@
   }
 }
 
-@keyframes sc {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 /* index */
-
 #index {
   padding-top: 100vh;
 }
 
 .index_wrap .band {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid $black;
   overflow: hidden;
   background: #fff;
   &:nth-of-type(1) {
-    border-top: 1px solid #000;
+    border-top: 1px solid $black;
   }
   p {
-    font-family: 'NanumMyeongjo';
+    font-family: $engFont;
     font-weight: 300;
     font-size: 8vw;
     white-space: nowrap;
@@ -299,7 +247,7 @@
     display: inline-block;
     width: 9vw;
     height: 0.5vw;
-    background: #222;
+    background: $black;
     vertical-align: middle;
   }
 }
@@ -312,7 +260,7 @@
 
 .introduce_wrap {
   .img_box {
-    background: url(../img/city-336708_1920.jpg) no-repeat center (center / cover);
+    background: url(../img/city.jpg) no-repeat center (center / cover);
     height: 100vh;
     position: relative;
 
@@ -321,7 +269,7 @@
       width: 292px;
       animation: keyword infinite 1s ease-in-out alternate;
       button{
-        background: #1e1e1e;
+        background: $black;
         color: #fff;
         border-radius: 0.2vw;
         padding: 0.5vw 0.8vw;
@@ -332,7 +280,7 @@
         background: #fff;
         width: 250px;
         padding: 20px;
-        border: 1px solid #000;
+        border: 1px solid $black;
       }
 
       &:nth-child(1) {
@@ -353,14 +301,14 @@
   }
 
   .txt_box {
-    display: flex;
-    justify-content: center;
+    @include flex;
+    @include justify-content;
     flex-direction: column;
     height: 100vh;
 
     p {
       word-break: keep-all;
-      font-family: 'NanumMyeongjo';
+      font-family: $engFont;
       font-size: 3vw;
       line-height: 1.5;
     }
@@ -447,8 +395,8 @@
 /* ability */
 
 #ability {
-  border-top: 1px solid #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
 }
 
 .ability_wrap {
@@ -466,6 +414,7 @@
       margin: 0;
       margin-bottom: 15px;
       padding: 0 10px;
+      font-family: $engFont;
       font-size: 3vw;
       background: #fff;
       line-height: 30px;
@@ -478,7 +427,7 @@
     right: 25px;
     left: 25px;
     bottom: 0;
-    display: flex;
+    @include flex;
     justify-content: space-between;
     width: calc(100% - 90px);
     padding: 100px 20px;
@@ -515,13 +464,14 @@
     li {
       margin-bottom: 10px;
       padding: 20px 0;
-      background: #000;
+      background: $black;
       color: #fff;
       text-align: left;
+      font-family: $engFont;
       font-size: 1vw;
       width: 0;
       transition: width 1s;
-
+    
       &.item1::after {
         content: "HTML";
         padding-left: 10px;
@@ -596,7 +546,7 @@
     line-height: 2;
 
     strong {
-      font-family: 'NanumMyeongjo';
+      font-family: $engFont;
       display: block;
       font-size: 6vw;
       opacity: 0;
@@ -626,7 +576,7 @@
   .right {
     position: relative;
     flex-basis: 50%;
-    border-left: 1px solid #222;
+    border-left: 1px solid $black;
     line-height: 1.5;
     box-sizing: border-box;
 
@@ -659,12 +609,12 @@
   }
 }
 
-.poroject_wrap {
+.project_wrap {
   padding: 0 10vw;
 }
 
 .project_box {
-  display: flex;
+  @include flex;
   justify-content: space-between;
   padding: 10vw 0;
 
@@ -674,15 +624,15 @@
 
   .left {
     flex-basis: 40%;
-    display: flex;
+    @include flex;
     flex-direction: column;
-    justify-content: center;
+    @include justify-content;
     cursor: pointer;
 
     strong {
       position: relative;
       display: block;
-      font-family: "NanumMyeongjo";
+      font-family: $engFont;
       font-size: 2vw;
       font-weight: 700;
       padding: 2vw 0;
@@ -772,156 +722,43 @@
   }
 }
 
-/* script */
-
-#script {
-  background: #121212;
-  color: #fff;
-}
-
-.script_wrap {
-  height: 100vh;
-  max-width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .script_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 26vw;
-    background: #fff;
-  }
-
-  .txt_box {
-    width: 20vw;
-    padding: 2.6vw;
-    text-align: center;
-    line-height: 2.6vw;
-    font-size: 2vw;
-    font-weight: 900;
-    color: #555;
-
-    ul {
-      height: 2.6vw;
-      color: #fff;
-      overflow: hidden;
-
-      li {
-        margin-bottom: 2.6vw;
-
-        &:nth-child(1) {
-          animation: txtUp 5s cubic-bezier(0.04, 0.57, 0.89, 0.39) infinite;
-        }
-
-        span {
-          display: inline-block;
-          padding: 0 0.7vw;
-        }
-
-        &:nth-child(1) span {
-          background: #ff0000;
-        }
-
-        &:nth-child(2) span {
-          background: #008000;
-        }
-
-        &:nth-child(3) span {
-          background: #0000ff;
-        }
-      }
-    }
-  }
-
-  .script_txt {
-    width: 100%;
-    text-align: center;
-
-    h3 {
-      font-size: 1.5vw;
-      margin: 3vh 0;
-    }
-
-    p {
-      font-size: 3vw;
-      line-height: 1.5;
-    }
-  }
-}
-
-/* 5%만큼 상단이동후 28%는 정지상태유지 */
-@keyframes txtUp {
-  0% {
-    margin-top: 5.2vw;
-  }
-
-  5% {
-    margin-top: 0px;
-  }
-
-  33% {
-    margin-top: 0px;
-  }
-
-  38% {
-    margin-top: -5.2vw;
-  }
-
-  66% {
-    margin-top: -5.2vw;
-  }
-
-  71% {
-    margin-top: -10.4vw;
-  }
-
-  99% {
-    margin-top: -10.4vw;
-  }
-
-  100% {
-    margin-top: -13vw;
-  }
-}
-
 /* footer */
 
 #footer {
   position: relative;
-  background: #1e1e1e;
+  background: $black;
   color: #fff;
 }
 
 .footer_wrap {
   max-width: 80%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex;
+  @include justify-content;
+  @include align-items;
   height: 100vh;
 
   .contact_box {
     text-align: center;
 
     p {
+      font-family: $engFont;
       font-size: 3vw;
       padding-bottom: 10vh;
     }
 
     input {
+      font-family: $engFont;
       width: 100%;
-      border: 1px solid #1e1e1e;
+      border: 1px solid $black;
       padding: 1vw;
       margin-bottom: 2vh;
     }
 
     textarea {
+      font-family: $engFont;
       width: 100%;
-      border: 1px solid #1e1e1e;
+      border: 1px solid $black;
       padding: 1vw;
       margin-bottom: 2vh;
       height: 20vh;
@@ -930,9 +767,10 @@
     .submit {
       width: 30%;
       border: 1px solid #fff;
-      background: #1e1e1e;
+      background: $black;
       color: #fff;
       border-radius: 1.5vw;
+      font-family: $engFont;
       font-size: 1vw;
       padding: 1vw;
       cursor: pointer;
@@ -1013,7 +851,7 @@
     }
   }
 
-  .poroject_wrap {
+  .project_wrap {
     .works {
       flex-direction: column;
     }
