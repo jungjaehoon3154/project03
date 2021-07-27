@@ -2,6 +2,8 @@
 /* header */
 #header {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 100;
   width: 100%; }
 
@@ -107,6 +109,11 @@
 /* left로 이동하려면 position 속성이 필요함 */
 /* home */
 #home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
   background: #FFF;
   color: #222;
   border-bottom: 1px solid #222; }
@@ -173,9 +180,15 @@
   100% {
     opacity: 0; } }
 /* index */
+#index {
+  padding-top: 100vh; }
+
 .index_wrap .band {
   border-bottom: 1px solid #222;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #fff; }
+  .index_wrap .band:nth-of-type(1) {
+    border-top: 1px solid #000; }
   .index_wrap .band p {
     font-family: 'NanumMyeongjo';
     font-weight: 300;
@@ -190,25 +203,36 @@
     vertical-align: middle; }
 
 /* introduce */
+#introduce {
+  overflow: hidden; }
+
 .introduce_wrap .img_box {
   background: url(../img/city-336708_1920.jpg) no-repeat center center/cover;
   height: 100vh;
   position: relative; }
-  .introduce_wrap .img_box span {
+  .introduce_wrap .img_box div {
     position: absolute;
-    background: #1e1e1e;
-    color: #fff;
-    border-radius: 0.2vw;
-    padding: 0.5vw 0.8vw;
-    font-size: 1.5vw;
+    width: 292px;
     animation: keyword infinite 1s ease-in-out alternate; }
-    .introduce_wrap .img_box span:nth-child(1) {
+    .introduce_wrap .img_box div button {
+      background: #1e1e1e;
+      color: #fff;
+      border-radius: 0.2vw;
+      padding: 0.5vw 0.8vw;
+      font-size: 1.5vw; }
+    .introduce_wrap .img_box div p {
+      display: none;
+      background: #fff;
+      width: 250px;
+      padding: 20px;
+      border: 1px solid #000; }
+    .introduce_wrap .img_box div:nth-child(1) {
       top: 40%;
       left: 20%; }
-    .introduce_wrap .img_box span:nth-child(2) {
+    .introduce_wrap .img_box div:nth-child(2) {
       top: 55%;
       right: 35%; }
-    .introduce_wrap .img_box span:nth-child(3) {
+    .introduce_wrap .img_box div:nth-child(3) {
       top: 20%;
       right: 50%; }
 .introduce_wrap .txt_box {
@@ -323,13 +347,9 @@
     background: #000;
     color: #fff;
     text-align: left;
-    font-size: 1vw; }
-    .ability_wrap .graph li.item1 {
-      width: 80%; }
-    .ability_wrap .graph li.item2 {
-      width: 75%; }
-    .ability_wrap .graph li.item3, .ability_wrap .graph li.item4 {
-      width: 60%; }
+    font-size: 1vw;
+    width: 0;
+    transition: width 1s; }
     .ability_wrap .graph li.item1::after {
       content: "HTML";
       padding-left: 10px; }
@@ -342,6 +362,17 @@
     .ability_wrap .graph li.item4::after {
       content: "PHOTOSHOP";
       padding-left: 10px; }
+  .ability_wrap .graph.on li.item1 {
+    width: 80%; }
+  .ability_wrap .graph.on li.item2 {
+    width: 75%;
+    transition-delay: 0.3s; }
+  .ability_wrap .graph.on li.item3 {
+    width: 60%;
+    transition-delay: 0.6s; }
+  .ability_wrap .graph.on li.item4 {
+    width: 60%;
+    transition-delay: 0.9s; }
 .ability_wrap .percent-indicator .per-0::before {
   content: '0%'; }
 .ability_wrap .percent-indicator .per-20::before {

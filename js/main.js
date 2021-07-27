@@ -1,24 +1,4 @@
 $(document).ready(function(){
-
-    /* fade */
-    $(window).on('scroll', function () {
-        const scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
-        const scrollTop = $(this).scrollTop(); 
-
-        $('.fade').each(function () {
-            if (scrollY > $(this).offset().top) {
-            $(this).addClass('on');
-            } else { 
-            $(this).removeClass('on');
-            }
-        });
-
-        // 텍스트 한글자씩 처리하기 위해 h1.logo에 .on 제어
-        if (scrollTop >= 0 && scrollTop <= $(this).height()) $('.logo').addClass('on');
-        else $('.logo').removeClass('on');
-    });
-    $(window).trigger('scroll');
-
     // 메뉴 열기
     $('#header .toggle').on('click', function () {
         $(this).toggleClass('active').next().toggleClass('active');
@@ -53,6 +33,60 @@ $(document).ready(function(){
         }
     });
 
+    // 스크롤 이벤트는 몇개를 만드는 거예요??
+    $(window).on('scroll', function () {
+        const scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
+        const scrollTop = $(this).scrollTop(); 
+        
+        // fade
+        $('.fade').each(function () {
+            if (scrollY > $(this).offset().top) {
+            $(this).addClass('on');
+            } else { 
+            $(this).removeClass('on');
+            }
+        });
+
+        // #home logo
+        // 텍스트 한글자씩 처리하기 위해 h1.logo에 .on 제어
+        if (scrollTop >= 0 && scrollTop <= $(this).height()) {
+            $('.logo').addClass('on');
+
+            // #index가 #home 위로 서서히 올라온다
+            gsap.to('#index', {marginTop: scrollTop * -0.5 ,duration: 0.5, ease: Power3.easeOut});
+        }
+        else {
+            $('.logo').removeClass('on');
+        }
+
+        //#index : 텍스트 가로로 움직이기
+        const offset1 = (scrollTop - $(".mov1").offset().top) * 0.5;
+        const offset2 = (scrollTop - $(".mov2").offset().top) * -0.1;
+        const offset3 = (scrollTop - $(".mov3").offset().top) * 0.4;
+        const offset4 = (scrollTop - $(".mov4").offset().top) * -0.3;
+        
+        $(".mov1").css({"transform":"translateX(" + offset1 +"px)"});
+        $(".mov2").css({"transform":"translateX(" + offset2 +"px)"});
+        $(".mov3").css({"transform":"translateX(" + offset3 +"px)"});
+        $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
+        //스크롤 내릴때 나타나기
+        if (scrollTop > $("#introduce").offset().top - $(window).height()/1.5) {
+            $(".introduce_wrap").addClass("show");
+        }
+        if (scrollTop > $("#ability").offset().top - $(window).height()/1.5) {
+            $(".ability_wrap").addClass("show");
+        }
+
+        // #ability : 그래프 늘어나기
+        if (scrollTop >= $('#ability').offset().top - $(window).height()/3) {
+            $('#ability .graph').addClass('on');
+        } else {
+            $('#ability .graph').removeClass('on');
+        }
+
+    });
+    $(window).trigger('scroll');
+
     // 텍스트 한글자씩 처리
     const $logo = $('.logo');
     let wordArray = $logo.html().split(' ');
@@ -80,7 +114,12 @@ $(document).ready(function(){
         $(this).css('animationDelay', (idx * 0.04) + 0.4 + 's');
     });
 
-    //마우스오버 효과
+    // 
+    $('#introduce .img_box button').on('click', function () {
+        $(this).next().stop().slideToggle();
+    });
+
+    //마우스오버 효과 => 정체가 뭔가요??
     $(".list1").mouseenter(function(){
         $(".show1").addClass("show");
     });
@@ -110,34 +149,6 @@ $(document).ready(function(){
     $(".list4").mouseleave(function(){
         $(".show4").removeClass("show");
         $(".show1").css("opacity", "1");
-    });
-
-    //텍스트 가로로 움직이기
-    $(window).scroll(function(){
-    const wScroll = $(this).scrollTop();
-        
-    const offset1 = (wScroll - $(".mov1").offset().top) * 0.5;
-    const offset2 = (wScroll - $(".mov2").offset().top) * -0.1;
-    const offset3 = (wScroll - $(".mov3").offset().top) * 0.4;
-    const offset4 = (wScroll - $(".mov4").offset().top) * -0.3;
-    
-    $(".mov1").css({"transform":"translateX(" + offset1 +"px)"});
-    $(".mov2").css({"transform":"translateX(" + offset2 +"px)"});
-    $(".mov3").css({"transform":"translateX(" + offset3 +"px)"});
-    $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
-    }); 
-
-    $(window).scroll(function(){
-        var wScroll = $(this).scrollTop();
-        
-        //스크롤 내릴때 나타나기
-        if (wScroll > $("#introduce").offset().top - $(window).height()/1.5) {
-            $(".introduce_wrap").addClass("show");
-        }
-        if (wScroll > $("#ability").offset().top - $(window).height()/1.5) {
-            $(".ability_wrap").addClass("show");
-        }
-    
     });
 
     //website 
