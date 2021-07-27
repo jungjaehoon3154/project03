@@ -8,19 +8,16 @@
     <meta name="description" content="jungjaehoon portfolio">
     <meta name="keywords" content="정재훈, 웹퍼블리셔 포트폴리오, web publisher">
     <title>정재훈 포트폴리오</title>
-
     <!-- css -->
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-
     <!-- favicon -->
     <link rel="apple-touch-icon" href="img/favicon_icon.ico">
     <link rel="shortcut icon" href="img/favicon_icon.ico">
-
     <!-- script -->
     <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/main.js"></script>  
 </head>
 
 <body>
@@ -41,7 +38,7 @@
                         <ul>
                             <li class="menu1"><a href="#home">HOME</a></li>
                             <li class="menu3"><a href="#introduce">INTRODUCE</a></li>
-                            <li class="menu2"><a href="#poroject">PROJECT</a></li>
+                            <li class="menu2"><a href="#project">PROJECT</a></li>
                             <li class="menu4"><a href="#footer">CONTACT</a></li>
                         </ul>
                     </nav>
@@ -49,7 +46,6 @@
             </div>
         </header>
         <!-- //header -->
-
         <main id="contents">
             <section id="home">
                 <div class="home_wrap">
@@ -65,7 +61,6 @@
                 </div>
             </section>
             <!-- //home -->
-
             <section id="index">
                 <div class="index_wrap">
                 <h2 class="blind">목차</h2>    
@@ -84,130 +79,197 @@
                 </div>
             </section>
             <!-- //index -->
-
             <section id="introduce">
                 <div class="introduce_wrap">
-                <h2 class="blind">자기소개</h2>    
-                    <div class="title fade">
-                        <span class="fade_up">안녕하세요</span>
-                        <h2 class="fade_up">웹퍼블리셔 정재훈입니다</h2>
-                        <p class="fade_up">제가 생각하는 마크업은 아파트와 같습니다. 태그, 속성, 우선순위를 이해하지 않고 만드는 페이지는 언젠가 허점이 발견되고, 무너지는 부실공사 아파트라고 생각합니다. 비록 화려한스킬은 없을지라도 표준화된 마크업을 하도록 노력하겠습니다.</p>
+                <h2 class="blind">자기소개</h2>  
+                    <div class="img_box">
+                        <div>
+                            <button type="button">#꼼꼼한</button>
+                            <p>웹표준에 맞게 마크업 할 수 있도록 노력합니다.</p>
+                        </div>
+                        <div>
+                            <button type="button">#차분한</button>
+                            <p>문제가 생기면 해결방안을 모색합니다.</p>
+                        </div>
+                        <div>
+                            <button type="button">#깔끔한</button>
+                            <p>정리정돈 잘된 코드를 만들려고 노력합니다.</p>
+                        </div>
+                    </div>
+                    <div class="txt_box">
+                        <div class="desc">
+                            <div class="front">
+                                <p>The markup I think is the same as the apartment.</p>
+                            </div>
+                            <div class="back">
+                                <p>제가 생각하는 마크업은 아파트와 같습니다.</p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="front">
+                                <p>I think that pages that do not understand tags, attributes,</p>
+                            </div>
+                            <div class="back">
+                                <p>태그, 속성, 우선순위를 이해하지 않고 만드는 페이지는</p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="front">
+                                <p>and priorities are poorly constructed apartments</p>
+                            </div>
+                            <div class="back">
+                                <p>언젠가 허점이 발견되고,</p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="front">
+                                <p>that will one day discover loopholes and collapse.</p>
+                            </div>
+                            <div class="back">
+                                <p>무너지는 부실공사 아파트라고 생각합니다.</p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="front">
+                                <p>I will try to do standardized markups even if there are no fancy skills.</p>
+                            </div>
+                            <div class="back">
+                                <p>화려한 기술이 없어도 표준화된 마크업을 할 수 있도록 노력하겠습니다.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- //introduce -->
-
             <section id="ability">
                 <div class="ability_wrap">
-                <h2 class="blind">능력</h2>
-                    <div class="left">
-                        <strong class="list1">HTML</strong>
-                        <strong class="list2">JAVASCRIPT</strong>
-                        <strong class="list3">PHOTOSHOP</strong>
-                        <strong class="list4">CSS</strong>
-                    </div>
-                    <div class="right">
-                        <p class="show1">웹표준과 웹접근성을 준수한 마크업을 할 수 있도록 노력합니다</p>
-                        <p class="show2">슬라이드와 같은 플러그인의 옵션을 활용하고 디자인에 맞게 적용 할 수 있습니다.</p>
-                        <p class="show3">간단한 툴을 이용한 이미지 보정, 편집을 할 수 있습니다.</p>
-                        <p class="show4">트랜지션과 트랜스폼, 키프레임을 이용해 간단한 애니메이션을 만들 수 있습니다.</p>
+                    <div class="graph-wrapper">
+                        <h2>Ability</h2>
+                        <div class="percent-indicator">
+                            <div class="per-0"></div>
+                            <div class="per-20"></div>
+                            <div class="per-40"></div>
+                            <div class="per-60"></div>
+                            <div class="per-80"></div>
+                            <div class="per-100"></div>
+                        </div>
+                        <ul class="graph">
+                            <li class="item1"></li>
+                            <li class="item2"></li>
+                            <li class="item3"></li>
+                            <li class="item4"></li>
+                        </ul>
                     </div>
                 </div>
             </section>
-            <!-- //ability -->
-
-            <section id="poroject">
-                <div class="poroject_wrap">
+            <!--//ability -->
+            <section id="project">
+                <div class="project_wrap">
                     <h2 class="blind">프로젝트</h2>
-                    <div class="works fade">
-                        <div class="left">
+                    <div class="project_box fade">
+                        <div class="left fade_right">
+                            <ul>
+                                <li class="active">
+                                    <strong>PORTFOLIO SITE</strong>
+                                    <div class="desc">
+                                        <p>W3C completed</p>
+                                        <p>reponsive site</p>
+                                        <p>vw, vh</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>SASS(SCSS)</strong>
+                                    <div class="desc">
+                                        <p>_var</p>
+                                        <p>_mixin</p>
+                                        <p>transition</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>JQUERY</strong>
+                                    <div class="desc">
+                                        <p>scroll</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right fade_left">
                             <img src="img/portfolio01.jpg" alt="">
-                            <strong>REPONSIVE</strong>
-                        </div>
-                        <div class="right fade_up">
-                            <h3>PORTFOLIO</h3>
-                            <p>CSS 전처리기인 SASS를 이용하여 구현하였습니다. 또한 미디어 쿼리를 이용하여 디바이스 종류에 따라 유연하게 보여지는 반응형 작업을 진행한 사이트입니다.</p>
-                            <a href="">VIEW SITE</a>
-                            <a href="">웹접근성 보고서</a>
+                            <a href="https://jungjaehoon3154.github.io/project03/index.html" target="_blank" >SITE</a>
                         </div>
                     </div>
-                    <div class="works fade">
-                        <div class="left">
+                    <div class="project_box fade">
+                        <div class="left fade_left">
+                            <ul>
+                                <li class="active">
+                                    <strong>HANWHA E&C</strong>
+                                    <div class="desc">
+                                        <p>W3C completed</p>
+                                        <p>reponsive site</p>
+                                        <p>px, %</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>CSS</strong>
+                                    <div class="desc">
+                                        <p>hover</p>
+                                        <p>transform(scale)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>JQUERY</strong>
+                                    <div class="desc">
+                                        <p>swiper slide</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="right fade_right">
                             <img src="img/portfolio02.jpg" alt="">
-                            <strong>REPONSIVE</strong>
-                        </div>
-                        <div class="right fade_up">
-                            <h3>HANWHA E&C</h3>
-                            <p>SWIPER 이미지 슬라이드, 탭 메뉴 등 스크립트를 이용하여 구현하였습니다. 또한 미디어 쿼리를 이용하여 디바이스 종류에 따라 유연하게 보여지는 반응형 작업을 진행한 사이트입니다.</p>
-                            <a href="">VIEW SITE</a>
-                            <a href="">웹접근성 보고서</a>
+                            <a href="https://jungjaehoon3154.github.io/project02/index.html" target="_blank" >SITE</a>
                         </div>
                     </div>
-                    <div class="works fade">
-                        <div class="left">
-                            <img src="img/portfolio03.jpg" alt="">
+                    <div class="project_box fade">
+                        <div class="left fade_right">
+                            <ul>
+                                <li class="active">
+                                    <strong>HMG</strong>
+                                    <div class="desc">
+                                        <p>fullpage</p>
+                                        <p>display flex</p>
+                                        <p>px, %</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>CSS</strong>
+                                    <div class="desc">
+                                        <p>svg</p>
+                                        <p>hover</p>
+                                        <p>px, %</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>JQUERY</strong>
+                                    <div class="desc">
+                                        <p>swiper slide</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="right fade_up">
-                            <h3>HMG</h3>
-                            <p>fullpage.js 플러그인을 활용하여 만든 풀페이지 형식의 사이트 입니다. 트랜스폼, 트랜지션, 키프레임으로 다양한 애니메이션 효과를 사용하였습니다.</p>
-                            <a href="">VIEW SITE</a>
-                            <a href="">웹접근성 보고서</a>
+                        <div class="right fade_left">
+                            <img src="img/portfolio03.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </section>
             <!-- //project -->
-
-            <section id="script">
-                <div class="script_wrap">
-                <h2 class="blind">스크립트 프로젝트</h2>
-                    <div class="script_cont">
-                        <div class="script_img">
-                            <img src="img/free-icon-hexagon-274375.png" alt="">
-                        </div>
-                        <div class="script_txt">
-                            <h3>animation</h3>
-                            <p>애니메이션 입니다.</p>
-                        </div>
-                    </div>
-                    <div class="script_cont">
-                        <div class="script_img">
-                            <img src="img/free-icon-hexagon-274375.png" alt="">
-                        </div>
-                        <div class="script_txt">
-                            <h3>animation</h3>
-                            <p>애니메이션 입니다.</p>
-                        </div>
-                    </div>
-                    <div class="script_cont">
-                        <div class="script_img">
-                            <img src="img/free-icon-hexagon-274375.png" alt="">
-                        </div>
-                        <div class="script_txt">
-                            <h3>script</h3>
-                            <p>스크립트 입니다.</p>
-                        </div>
-                    </div>
-                    <div class="script_cont">
-                        <div class="script_img">
-                            <img src="img/free-icon-hexagon-274375.png" alt="">
-                        </div>
-                        <div class="script_txt">
-                            <h3>script</h3>
-                            <p>스크립트 입니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- //animation -->
         </main>
         <!-- //main  -->
-
         <footer id="footer">
             <div class="footer_wrap">
                 <div class="contact_box">
                     <p>SEND A MESSAGE</p>
-                    <form action="" method="POST">
+                    <form action="https://junajehoon3154@naver.com" method="POST">
                         <input type="text" name="name" class="name" placeholder="name">
                         <input type="email" name="email" class="email" placeholder="email">
                         <textarea name="message" placeholder="message"></textarea>
