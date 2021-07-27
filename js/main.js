@@ -69,11 +69,7 @@ $(document).ready(function(){
         $(".mov2").css({"transform":"translateX(" + offset2 +"px)"});
         $(".mov3").css({"transform":"translateX(" + offset3 +"px)"});
         $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
-<<<<<<< HEAD
         
-=======
-  
->>>>>>> 439e3c3135ca2843d011317d962fba15af9bcfdb
         // #ability : 그래프 늘어나기
         if (scrollTop >= $('#ability').offset().top - $(window).height()/3) {
             $('#ability .graph').addClass('on');
