@@ -16,7 +16,7 @@ $(document).ready(function(){
             }
         });
     });
-
+    // 네비 제어
     $("#gnb ul li a").on({
         'mouseenter focus': function () {
             const bgNum = $(this).parent().index();
@@ -85,7 +85,6 @@ $(document).ready(function(){
         }
     });
 
-    
     $(window).trigger('scroll');
 
     // 텍스트 한글자씩 처리
@@ -120,8 +119,7 @@ $(document).ready(function(){
         $(this).next().stop().slideToggle();
     });
 
- 
-    // website 
+    // 프로젝트 탭
     $('.project_box li strong').click(function () {
         $(this).parent('li').toggleClass('active');
         $(this).parent('li').siblings('li').removeClass('active');

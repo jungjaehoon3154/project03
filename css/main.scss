@@ -278,9 +278,11 @@
       p{
         display: none;
         background: #fff;
-        width: 250px;
-        padding: 20px;
+        width: 12vw;
+        padding: 1vw;
         border: 1px solid $black;
+        font-size: 1vw;
+        line-height: 1.5;
       }
 
       &:nth-child(1) {
@@ -627,7 +629,6 @@
     @include flex;
     flex-direction: column;
     @include justify-content;
-    cursor: pointer;
 
     strong {
       position: relative;
@@ -637,6 +638,7 @@
       font-weight: 700;
       padding: 2vw 0;
       border-bottom: 1px solid #ddd;
+      cursor: pointer;
 
       &::after {
         content: "";
@@ -679,13 +681,6 @@
     img {
       width: 40vw;
       height: 25vw;
-    }
-
-    a {
-      position: absolute;
-      bottom: -10%;
-      left: 0;
-      font-size: 2vw;
     }
   }
 }
