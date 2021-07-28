@@ -62,7 +62,7 @@
     background: $black;
     color: #fff;
     font-weight: 700;
-    z-index: 999;
+    z-index: 10;
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s;
@@ -76,10 +76,6 @@
     }
 
     &.bg2 {
-      background: #6f4f28;
-    }
-
-    &.bg3 {
       background: #723838;
     }
 
@@ -200,7 +196,7 @@
 
       .up {
         opacity: 0;
-        transform: translateY(-5.7vw);
+        transform: translateY(-8vw);
         display: inline-block;
       }
     }
@@ -214,7 +210,7 @@
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(-5.7vw);
+    transform: translateY(-8vw);
   }
 
   100% {
@@ -240,7 +236,7 @@
   p {
     font-family: $engFont;
     font-weight: 300;
-    font-size: 10vw;
+    font-size: 8vw;
     white-space: nowrap;
     padding: 2vw 0;
   }
@@ -326,23 +322,23 @@
     transition: opacity .5s ease, transform .5s ease;
 
     &:nth-child(1) {
-      transition-delay: .2s;
+      transition-delay: .3s;
     }
 
     &:nth-child(2) {
-      transition-delay: .4s;
-    }
-
-    &:nth-child(3) {
       transition-delay: .6s;
     }
 
+    &:nth-child(3) {
+      transition-delay: .9s;
+    }
+
     &:nth-child(4) {
-      transition-delay: .8s;
+      transition-delay: 1.2s;
     }
 
     &:nth-child(5) {
-      transition-delay: 1s;
+      transition-delay: 1.5s;
     }
 
     &.on {
@@ -633,6 +629,7 @@
       display: block;
       width: 7vw;
       height: 7vw;
+      font-family: $engFont;
       font-size: 1.5vw;
       z-index: 10;
       text-align: center;
@@ -794,10 +791,10 @@
 
   #gnb ul li {
     padding-bottom: 3vw;
+  }
 
-    a {
-      font-size: 8vw;
-    }
+  #gnb ul li  a {
+    font-size: 8vw;
   }
 
   .home_wrap h1 {
@@ -835,45 +832,43 @@
   }
 
   .ability_wrap .graph li {
-    font-size: 2vw;
+    font-size: 16px;
   }
 
   .project_box {
     flex-direction: column-reverse;
+  }
+  
+  .project_box:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
 
-    &:nth-child(odd) {
-      flex-direction: column-reverse;
-    }
+  .project_box .right {
+    margin: 0 0 5vw 18vw;
+  }
+  .project_box  img {
+    width: 45vw;
+    height: 30vw;
+  }
 
-    .right {
-      margin: 0 0 5vw 18vw;
+  .project_box  a {
+    width: 10vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 2vw;
+  }
+  
+  .project_box .left strong {
+    font-size: 3vw;
+  }
 
-      img {
-        width: 45vw;
-        height: 30vw;
-      }
+  .project_box::after {
+    width: 3vw;
+    height: 3vw;
+  }
 
-      a {
-        width: 10vw;
-        height: 10vw;
-        line-height: 10vw;
-        font-size: 2vw;
-      }
-    }
-
-    .left strong {
-      font-size: 3vw;
-
-      &::after {
-        width: 3vw;
-        height: 3vw;
-
-      }
-    }
-
-    .left .desc p {
-      font-size: 2vw;
-    }
+  .project_box .left .desc p {
+    font-size: 2vw;
   }
 
   .footer_wrap .contact_box p {
@@ -899,6 +894,43 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .ability_wrap .percent-indicator {
+   padding: 60px 20px;
+  }
+
+  .ability_wrap .percent-indicator div::before, .ability_wrap .percent-indicator div::after {
+    font-size: 18px;
+  }
+
+  .ability_wrap .graph {
+    margin: 100px auto;
+  }
+
+  .ability_wrap .graph li {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+
+  .project_box .right img {
+    width: 50vw;
+    height: 35vw;
+  }
+
+  .project_box .right a {
+    width: 12vw;
+    height: 12vw;
+    line-height: 12vw;
+    font-size: 2.5vw;
+  }
+
+  .project_box .left strong::after {
+    width: 25px;
+    height: 25px;
+  }
+}  
+
 @media (max-width: 600px) {
   .introduce_wrap .img_box {
     height: 100vw;
@@ -908,43 +940,39 @@
     font-size: 7vw;
   }
 
-  .ability_wrap .graph li {
-    font-size: 3vw;
-  }
-
-  .ability_wrap .percent-indicator div::before,
-  .ability_wrap .percent-indicator div::after {
-    font-size: 20px;
-  }
-
   .project_box .left .desc p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .project_box .right a {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .footer_wrap .contact_box .submit {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .header_wrap .toggle {
     right: 4vw;
   }
 
   .home_wrap h1 {
-    font-size: 35px;
+    font-size: 36px;
   }
 
   .introduce_wrap .img_box div button {
+    font-size: 14px;
+  }
+
+  .introduce_wrap .img_box div p {
+    width: 120px;
     font-size: 12px;
   }
 
   .introduce_wrap .txt_box p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .project_box .right a {
@@ -954,12 +982,7 @@
   }
 
   .project_box .left strong {
-    font-size: 14px;
-  }
-
-  .project_box .left strong::after {
-    width: 20px;
-    height: 20px;
+    font-size: 16px;
   }
 
   .footer_wrap .contact_box p {

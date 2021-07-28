@@ -32,7 +32,6 @@ $(document).ready(function(){
             $('html, body').stop().animate({scrollTop: $tg.offset().top});
         }
     });
-
     // 스크롤 이벤트
     $(window).on('scroll', function () {
         const scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
@@ -77,7 +76,7 @@ $(document).ready(function(){
             $('#ability .graph').removeClass('on');
         }
 
-        // introduce txt animation
+        // introduce 애니메이션
         if(scrollTop >= $('.introduce_wrap .txt_box').offset().top - $(window).height()/3){
             $('.introduce_wrap .desc').addClass('on');
         } else {
@@ -86,7 +85,6 @@ $(document).ready(function(){
     });
 
     $(window).trigger('scroll');
-
     // 텍스트 한글자씩 처리
     const $logo = $('.logo');
     let wordArray = $logo.html().split(' ');
@@ -108,7 +106,6 @@ $(document).ready(function(){
         }
         $logo.append(tagWrite);
     }
-
     // delay 시간 지정
     $('.logo .word .up').each(function (idx) {
         $(this).css('animationDelay', (idx * 0.04) + 0.4 + 's');
@@ -119,7 +116,7 @@ $(document).ready(function(){
         $(this).next().stop().slideToggle();
     });
 
-    // 프로젝트 탭
+    // 프로젝트 
     $('.project_box li strong').click(function () {
         $(this).parent('li').toggleClass('active');
         $(this).parent('li').siblings('li').removeClass('active');
