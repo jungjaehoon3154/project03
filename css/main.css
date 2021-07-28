@@ -586,7 +586,8 @@
 
   .project_box .right {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-bottom: 5vw; }
 
   .project_box .left strong {
     font-size: 3vw; }
