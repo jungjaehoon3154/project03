@@ -582,7 +582,8 @@
         height: 2vw;
         display: block;
         position: absolute;
-        top: 2vw;
+        top: 50%;
+        transform: translateY(-50%);
         right: 0;
         background: url(../img/btn-webview.png);
         background-size: contain;
@@ -862,6 +863,11 @@
     font-size: 3vw;
   }
 
+  .project_box .left strong::after {
+    width: 3vw;
+    height: 3vw;
+  }
+
   .project_box::after {
     width: 3vw;
     height: 3vw;
@@ -924,11 +930,6 @@
     line-height: 12vw;
     font-size: 2.5vw;
   }
-
-  .project_box .left strong::after {
-    width: 25px;
-    height: 25px;
-  }
 }  
 
 @media (max-width: 600px) {
@@ -983,6 +984,7 @@
 
   .project_box .left strong {
     font-size: 16px;
+    padding: 3vw 0;
   }
 
   .footer_wrap .contact_box p {
