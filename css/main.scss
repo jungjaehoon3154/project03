@@ -162,8 +162,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
+  z-index: -1;
   border-bottom: 1px solid $black;
 }
 
@@ -214,7 +214,7 @@
 
 /* index */
 #index {
-  padding-top: 100vh; 
+  padding-top: 100vh;
 }
 
 .index_wrap .band {
@@ -265,6 +265,7 @@
         color: #fff;
         border-radius: 0.2vw;
         padding: 0.5vw 0.8vw;
+        font-family: $engFont;
         font-size: 1.5vw;
       }
 
@@ -400,7 +401,7 @@
 }
 
 .ability_wrap {
-  .graph-wrapper {
+  .graph_wrap {
     position: relative;
     padding: 25px;
     max-width: 1200px;
@@ -421,7 +422,7 @@
     }
   }
 
-  .percent-indicator {
+  .percent_indicator {
     position: absolute;
     top: 0;
     right: 25px;
@@ -439,7 +440,7 @@
       border-left: 2px dashed #aaa;
     }
 
-    .per-0 {
+    .per_0 {
       transform: translateX(1px);
     }
 
@@ -517,28 +518,28 @@
     }
   }
 
-  .percent-indicator {
-    .per-0::before {
+  .percent_indicator {
+    .per_0::before {
       content: '0%';
     }
 
-    .per-20::before {
+    .per_20::before {
       content: '20%';
     }
 
-    .per-40::before {
+    .per_40::before {
       content: '40%';
     }
 
-    .per-60::before {
+    .per_60::before {
       content: '60%';
     }
 
-    .per-80::before {
+    .per_80::before {
       content: '80%';
     }
 
-    .per-100::before {
+    .per_100::before {
       content: '100%';
     }
   }
@@ -566,7 +567,6 @@
     strong {
       position: relative;
       display: block;
-      font-family: $engFont;
       font-size: 2vw;
       font-weight: 700;
       padding: 2vw 0;
@@ -624,10 +624,13 @@
       display: block;
       width: 150px;
       border-radius: 50px;
- 
-      .siteView-btn {
-        font-family: 'NanumMyeongjo';
-        font-size: 58px;
+      
+      svg {
+        font-family: $engFont;
+
+        .siteView-btn {
+          font-size: 58px;
+        }
       }
     }
   }

@@ -106,8 +106,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
+  z-index: -1;
   border-bottom: 1px solid #1e1e1e; }
 
 .home_wrap {
@@ -185,6 +185,7 @@
       color: #fff;
       border-radius: 0.2vw;
       padding: 0.5vw 0.8vw;
+      font-family: NanumMyeongjo;
       font-size: 1.5vw; }
     .introduce_wrap .img_box div p {
       display: none;
@@ -272,12 +273,12 @@
   border-top: 1px solid #1e1e1e;
   border-bottom: 1px solid #1e1e1e; }
 
-.ability_wrap .graph-wrapper {
+.ability_wrap .graph_wrap {
   position: relative;
   padding: 25px;
   max-width: 1200px;
   margin: auto; }
-  .ability_wrap .graph-wrapper h2 {
+  .ability_wrap .graph_wrap h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -289,7 +290,7 @@
     font-size: 3vw;
     background: #fff;
     line-height: 30px; }
-.ability_wrap .percent-indicator {
+.ability_wrap .percent_indicator {
   position: absolute;
   top: 0;
   right: 25px;
@@ -303,14 +304,14 @@
   justify-content: space-between;
   width: calc(100% - 90px);
   padding: 100px 20px; }
-  .ability_wrap .percent-indicator div {
+  .ability_wrap .percent_indicator div {
     position: relative;
     width: 0;
     margin-left: -1px;
     border-left: 2px dashed #aaa; }
-  .ability_wrap .percent-indicator .per-0 {
+  .ability_wrap .percent_indicator .per_0 {
     transform: translateX(1px); }
-  .ability_wrap .percent-indicator div::before, .ability_wrap .percent-indicator div::after {
+  .ability_wrap .percent_indicator div::before, .ability_wrap .percent_indicator div::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -355,17 +356,17 @@
   .ability_wrap .graph.on li.item4 {
     width: 60%;
     transition-delay: 0.9s; }
-.ability_wrap .percent-indicator .per-0::before {
+.ability_wrap .percent_indicator .per_0::before {
   content: '0%'; }
-.ability_wrap .percent-indicator .per-20::before {
+.ability_wrap .percent_indicator .per_20::before {
   content: '20%'; }
-.ability_wrap .percent-indicator .per-40::before {
+.ability_wrap .percent_indicator .per_40::before {
   content: '40%'; }
-.ability_wrap .percent-indicator .per-60::before {
+.ability_wrap .percent_indicator .per_60::before {
   content: '60%'; }
-.ability_wrap .percent-indicator .per-80::before {
+.ability_wrap .percent_indicator .per_80::before {
   content: '80%'; }
-.ability_wrap .percent-indicator .per-100::before {
+.ability_wrap .percent_indicator .per_100::before {
   content: '100%'; }
 
 .project_wrap {
@@ -394,7 +395,6 @@
     .project_box .left strong {
       position: relative;
       display: block;
-      font-family: NanumMyeongjo;
       font-size: 2vw;
       font-weight: 700;
       padding: 2vw 0;
@@ -436,9 +436,10 @@
       display: block;
       width: 150px;
       border-radius: 50px; }
-      .project_box .right a .siteView-btn {
-        font-family: 'NanumMyeongjo';
-        font-size: 58px; }
+      .project_box .right a svg {
+        font-family: NanumMyeongjo; }
+        .project_box .right a svg .siteView-btn {
+          font-size: 58px; }
 
 /* fade animation */
 .fade .fade_up,
