@@ -52,7 +52,7 @@ $(document).ready(function(){
             $('.logo').addClass('on');
 
             // #index가 #home 위로 서서히 올라온다
-            gsap.to('#index', {marginTop: scrollTop * -0.1 ,duration: 0.5, ease: Power3.easeOut});
+            gsap.to('#index', {marginTop: scrollTop * -0.2, duration: 0.5, ease: Power3.easeOut});
         }
         else {
             $('.logo').removeClass('on');
@@ -70,14 +70,14 @@ $(document).ready(function(){
         $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
         
         // #ability : 그래프 늘어나기
-        if (scrollTop >= $('#ability').offset().top - $(window).height()/3) {
+        if (scrollTop >= $('#ability').offset().top - $(window).height()/2) {
             $('#ability .graph').addClass('on');
         } else {
             $('#ability .graph').removeClass('on');
         }
 
         // introduce 애니메이션
-        if(scrollTop >= $('.introduce_wrap .txt_box').offset().top - $(window).height()/3){
+        if(scrollTop >= $('.introduce_wrap .txt_box').offset().top - $(window).height()/2){
             $('.introduce_wrap .desc').addClass('on');
         } else {
             $('.introduce_wrap .desc').removeClass('on');

@@ -64,7 +64,6 @@
     font-weight: 700;
     z-index: 10;
     visibility: hidden;
-    opacity: 0;
     transition: all 0.5s;
 
     &.bg0 {
@@ -78,11 +77,14 @@
     &.bg2 {
       background: #723838;
     }
+    /*
+    &.bg3 {
+      background: #6f4f28;
+    }*/
 
     &.active {
       visibility: visible;
       height: 100%;
-      opacity: 0.9;
     }
 
     li {
@@ -116,12 +118,6 @@
     }
   }
 }
-
-/* 메뉴를 선택하면 배경색 변경하기 */
-
-/* .gnb_bg.active */
-
-/* transition을 after 상태에 주면 시작만 transition이 일어나고 되돌아가지는 않는다 */
 
 /* nav */
 
@@ -160,8 +156,6 @@
   }
 }
 
-/* left로 이동하려면 position 속성이 필요함 */
-
 /* home */
 
 #home {
@@ -170,7 +164,6 @@
   left: 0;
   z-index: -1;
   width: 100%;
-  background: #fff;
   border-bottom: 1px solid $black;
 }
 
@@ -221,7 +214,7 @@
 
 /* index */
 #index {
-  padding-top: 100vh;
+  padding-top: 100vh; 
 }
 
 .index_wrap .band {
@@ -291,13 +284,17 @@
       }
 
       &:nth-child(2) {
-        top: 55%;
-        right: 35%;
+        top: 20%;
+        right: 40%;
       }
 
       &:nth-child(3) {
-        top: 20%;
-        right: 50%;
+        top: 55%;
+        right: 25%;
+      }
+
+      .on {
+        display: block;
       }
     }
   }
@@ -349,7 +346,7 @@
     position: relative;
     perspective: 600px;
     width: 100%;
-    height: 5vw;
+    height: 6vw;
     text-align: center;
   }
 
@@ -619,6 +616,20 @@
       width: 40vw;
       height: 25vw;
     }
+
+    a {
+      position: absolute;
+      bottom: -5%;
+      right: 0;
+      display: block;
+      width: 150px;
+      border-radius: 50px;
+ 
+      .siteView-btn {
+        font-family: 'NanumMyeongjo';
+        font-size: 58px;
+      }
+    }
   }
 }
 
@@ -777,20 +788,12 @@
     padding-bottom: 3vw;
   }
 
-  #gnb ul li  a {
-    font-size: 8vw;
-  }
-
   .home_wrap h1 {
     font-size: 7vw;
   }
 
   .index_wrap .band p {
     padding: 4vw 0;
-  }
-
-  .introduce_wrap .img_box {
-    height: 90vw;
   }
 
   .introduce_wrap .img_box div button {
@@ -801,10 +804,6 @@
   .introduce_wrap .img_box div p {
     width: 23vw;
     font-size: 2vw;
-  }
-
-  .introduce_wrap .txt_box {
-    height: 90vw;
   }
 
   .introduce_wrap .desc {
@@ -827,15 +826,21 @@
     flex-direction: column-reverse;
   }
 
-  .project_box  img {
-    width: 45vw;
-    height: 30vw;
-  }
-
   .project_box .right {
     display: flex;
     justify-content: center;
     padding-bottom: 5vw;
+  }
+
+  .project_box .right img {
+    width: 45vw;
+    height: 30vw;
+  }
+
+  .project_box .right a {
+    bottom: 5%;
+    right: 20%;
+    width: 120px;
   }
 
   .project_box .left strong {
@@ -880,6 +885,13 @@
 }
 
 @media (max-width: 768px) {
+  .introduce_wrap .img_box {
+    height: 80vh;
+  }
+
+  .introduce_wrap .txt_box {
+    height: 70vh;
+  }
 
   .ability_wrap .percent-indicator {
    padding: 60px 20px;
@@ -897,25 +909,16 @@
     font-size: 12px;
     padding: 15px 0;
   }
+
+  .project_box .right img {
+    width: 50vw;
+    height: 35vw;
+  }
+
+  .project_box .right a {
+    right: 15%;
+  }
 }  
-
-@media (max-width: 600px) {
-  .introduce_wrap .img_box {
-    height: 100vw;
-  }
-
-  .ability_wrap .graph-wrapper h2 {
-    font-size: 7vw;
-  }
-
-  .project_box .left .desc p {
-    font-size: 14px;
-  }
-
-  .footer_wrap .contact_box .submit {
-    font-size: 14px;
-  }
-}
 
 @media (max-width: 500px) {
   .header_wrap .toggle {
@@ -934,9 +937,20 @@
     width: 120px;
     font-size: 12px;
   }
+  .introduce_wrap .img_box {
+    height: 60vh;
+  }
+
+  .introduce_wrap .txt_box {
+    height: 50vh;
+  }
 
   .introduce_wrap .txt_box p {
     font-size: 14px;
+  }
+
+  .ability_wrap .graph-wrapper h2 {
+    font-size: 7vw;
   }
 
   .project_box .left strong {
@@ -944,8 +958,20 @@
     padding: 3vw 0;
   }
 
+  .project_box .left .desc p {
+    font-size: 14px;
+  }
+
+  .project_box .right a {
+    width: 90px;
+  }
+
   .footer_wrap .contact_box p {
-    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .footer_wrap .contact_box .submit {
+    font-size: 14px;
   }
 
 }
