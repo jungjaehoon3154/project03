@@ -52,7 +52,7 @@ $(document).ready(function(){
             $('.logo').addClass('on');
 
             // #index가 #home 위로 서서히 올라온다
-            gsap.to('#index', {marginTop: scrollTop * -0.2, duration: 0.5, ease: Power3.easeOut});
+           // gsap.to('#index', {marginTop: scrollTop * -0.2, duration: 0.5, ease: Power3.easeOut});
         }
         else {
             $('.logo').removeClass('on');
