@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* header */
 #header {
   position: fixed;
@@ -271,73 +272,70 @@
   100% {
     transform: translateY(0); } }
 /* ability */
-#ability {
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa; }
-  #ability .ability_wrap {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    width: 100%; }
-    #ability .ability_wrap .ability_box {
-      width: calc(100% / 3);
-      height: 100vh; }
-      #ability .ability_wrap .ability_box.list1 {
-        background: url("../img/ability_01.jpg") no-repeat center center/cover; }
-      #ability .ability_wrap .ability_box.list2 {
-        background: url("../img/ability_02.jpg") no-repeat center center/cover; }
-      #ability .ability_wrap .ability_box.list3 {
-        background: url("../img/ability_03.jpg") no-repeat center center/cover; }
-      #ability .ability_wrap .ability_box::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        opacity: 0;
-        z-index: 1; }
-      #ability .ability_wrap .ability_box.list1::before {
-        background: url("../img/ability_01.jpg") no-repeat center center/cover; }
-      #ability .ability_wrap .ability_box.list2::before {
-        background: url("../img/ability_02.jpg") no-repeat center center/cover; }
-      #ability .ability_wrap .ability_box.list3::before {
-        background: url("../img/ability_03.jpg") center center/cover; }
-      #ability .ability_wrap .ability_box:hover::before {
-        width: 100%;
-        opacity: 1; }
-    #ability .ability_wrap .txt_wrap {
-      position: relative;
-      z-index: 10;
+.ability_wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+  .ability_wrap .ability_box {
+    width: calc(100% / 3);
+    height: 100vh; }
+    .ability_wrap .ability_box.list1 {
+      background: url("../img/ability_01.jpg") no-repeat center center/cover; }
+    .ability_wrap .ability_box.list2 {
+      background: url("../img/ability_02.jpg") no-repeat center center/cover; }
+    .ability_wrap .ability_box.list3 {
+      background: url("../img/ability_03.jpg") no-repeat center center/cover; }
+    .ability_wrap .ability_box::before {
+      content: "";
       display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
       height: 100%;
-      text-align: center; }
-      #ability .ability_wrap .txt_wrap .txt_box {
-        height: 100%;
-        border-right: 1px solid; }
-        #ability .ability_wrap .txt_wrap .txt_box strong {
-          transition: all 0.5s;
-          display: block;
-          padding-top: 70%;
-          font-size: 3vw;
-          width: 100%;
-          color: #fff; }
-        #ability .ability_wrap .txt_wrap .txt_box p {
-          transition: all 0.5s;
-          margin-top: 10px;
-          opacity: 0;
-          color: #fff;
-          font-size: 1.5vw;
-          line-height: 1.5; }
-      #ability .ability_wrap .txt_wrap:hover .txt_box strong {
-        padding-top: 50%; }
-      #ability .ability_wrap .txt_wrap:hover .txt_box p {
-        opacity: 1; }
+      opacity: 0;
+      z-index: 1; }
+    .ability_wrap .ability_box.list1::before {
+      background: url("../img/ability_01.jpg") no-repeat center center/cover; }
+    .ability_wrap .ability_box.list2::before {
+      background: url("../img/ability_02.jpg") no-repeat center center/cover; }
+    .ability_wrap .ability_box.list3::before {
+      background: url("../img/ability_03.jpg") center center/cover; }
+    .ability_wrap .ability_box:hover::before {
+      width: 100%;
+      opacity: 1; }
+  .ability_wrap .txt_wrap {
+    position: relative;
+    z-index: 10;
+    display: block;
+    height: 100%;
+    text-align: center; }
+    .ability_wrap .txt_wrap .txt_box {
+      height: 100%;
+      border-right: 1px solid #1e1e1e; }
+      .ability_wrap .txt_wrap .txt_box strong {
+        transition: all 0.5s;
+        display: block;
+        padding-top: 70%;
+        font-size: 3vw;
+        width: 100%;
+        color: #fff; }
+      .ability_wrap .txt_wrap .txt_box p {
+        transition: all 0.5s;
+        margin-top: 10px;
+        opacity: 0;
+        color: #fff;
+        font-size: 1.5vw;
+        line-height: 1.5; }
+    .ability_wrap .txt_wrap:hover .txt_box strong {
+      padding-top: 50%; }
+    .ability_wrap .txt_wrap:hover .txt_box p {
+      opacity: 1; }
 
 .project_wrap {
   padding: 0 10vw; }
@@ -519,6 +517,7 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
+/* 반응형 */
 @media (max-width: 1024px) {
   .header_wrap .toggle {
     right: 4vw; }
@@ -543,33 +542,38 @@
   .introduce_wrap .desc {
     height: 8vw; }
 
-  #ability .ability_wrap {
+  .ability_wrap {
     display: block; }
 
-  #ability .ability_wrap .ability_box {
+  .ability_wrap .ability_box {
     width: 100%;
     height: calc(100vh / 3);
     border-bottom: 1px solid #aaa; }
 
-  #ability .ability_wrap .ability_box .txt_box {
+  .ability_wrap .txt_wrap .txt_box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center; }
 
-  #ability .ability_wrap .ability_box .txt_box strong {
+  .ability_wrap .txt_wrap .txt_box strong {
     padding-top: 0;
     font-size: 4vw; }
 
-  #ability .ability_wrap .ability_box .txt_box:hover strong {
+  .ability_wrap .txt_wrap .txt_box:hover strong {
     padding-top: 0;
     padding-right: 10%; }
 
-  #ability .ability_wrap .ability_box .txt_box p {
+  .ability_wrap .txt_wrap .txt_box p {
     padding-top: 0;
     font-size: 2vw;
     width: 100%;
     word-break: keep-all; }
 
-  #ability .ability_wrap .ability_box .txt_box:hover p {
+  .ability_wrap .txt_wrap .txt_box:hover p {
     padding-right: 20%;
     width: 100%; }
 
@@ -580,7 +584,12 @@
     flex-direction: column-reverse; }
 
   .project_box .right {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
     padding-bottom: 5vw; }
 
@@ -630,13 +639,13 @@
   .introduce_wrap .txt_box {
     height: 70vh; }
 
-  #ability .ability_wrap .ability_box {
+  .ability_wrap .ability_box {
     height: calc(70vh / 3); }
 
-  #ability .ability_wrap .ability_box .txt_box strong {
+  .ability_wrap .txt_wrap .txt_box strong {
     font-size: 5vw; }
 
-  #ability .ability_wrap .ability_box .txt_box p {
+  .ability_wrap .txt_wrap .txt_box p {
     font-size: 2.5vw; }
 
   .project_box .right img {
@@ -674,10 +683,10 @@
   .introduce_wrap .txt_box p {
     font-size: 14px; }
 
-  #ability .ability_wrap .ability_box .txt_box strong {
+  .ability_wrap .txt_wrap .txt_box strong {
     font-size: 24px; }
 
-  #ability .ability_wrap .ability_box .txt_box p {
+  .ability_wrap .txt_wrap .txt_box p {
     font-size: 12px; }
 
   .project_box .left strong {

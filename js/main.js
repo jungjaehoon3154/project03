@@ -37,22 +37,9 @@ $(document).ready(function(){
         const scrollY = $(this).scrollTop() + $(this).height() * 2/3; 
         const scrollTop = $(this).scrollTop(); 
         
-        // fade
-        $('.fade').each(function () {
-            if (scrollY > $(this).offset().top) {
-            $(this).addClass('on');
-            } else { 
-            $(this).removeClass('on');
-            }
-        });
-
         // #home logo
-        // 텍스트 한글자씩 처리하기 위해 h1.logo에 .on 제어
         if (scrollTop >= 0 && scrollTop <= $(this).height()) {
             $('.logo').addClass('on');
-
-            // #index가 #home 위로 서서히 올라온다
-           // gsap.to('#index', {marginTop: scrollTop * -0.2, duration: 0.5, ease: Power3.easeOut});
         }
         else {
             $('.logo').removeClass('on');
@@ -68,27 +55,30 @@ $(document).ready(function(){
         $(".mov2").css({"transform":"translateX(" + offset2 +"px)"});
         $(".mov3").css({"transform":"translateX(" + offset3 +"px)"});
         $(".mov4").css({"transform":"translateX(" + offset4 +"px)"});
-        
-        // #ability : 그래프 늘어나기
-        if (scrollTop >= $('#ability').offset().top - $(window).height()/2) {
-            $('#ability .graph').addClass('on');
-        } else {
-            $('#ability .graph').removeClass('on');
-        }
 
         // introduce 애니메이션
-        if(scrollTop >= $('.introduce_wrap .txt_box').offset().top - $(window).height()/2){
+        $('.introduce_wrap .txt_box').each(function () {
+            if (scrollY > $(this).offset().top) {
             $('.introduce_wrap .desc').addClass('on');
-        } else {
+            } else { 
             $('.introduce_wrap .desc').removeClass('on');
-        }
+            }
+        });
+
+        // project fade 효과
+        $('.fade').each(function () {
+            if (scrollY > $(this).offset().top) {
+            $(this).addClass('on');
+            } else { 
+            $(this).removeClass('on');
+            }
+        });
     });
 
     $(window).trigger('scroll');
     // 텍스트 한글자씩 처리
     const $logo = $('.logo');
     let wordArray = $logo.html().split(' ');
-    // console.log(wordArray);
     let tagWrite = '';
     for (let i = 0; i < wordArray.length; i++) {
       $logo.html(''); // 기존 태그 우선 지우기
@@ -96,11 +86,10 @@ $(document).ready(function(){
         tagWrite += '<br>';
         } else {
         let spanArray = wordArray[i].split(''); //한글자씩 잘라서 배열에 저장
-        // console.log(spanArray);
         // 반복문을 통해 각 div 부모 안에 막내 자식으로 span 동적생성
         tagWrite += '<div class="word">';
         for (let j = 0; j < spanArray.length; j++) {
-            tagWrite += `<span class="up">${spanArray[j]}</span>`;
+            tagWrite += '<span class="up">' + spanArray[j] + '</span>';
         }
         tagWrite += '</div>';
         }
